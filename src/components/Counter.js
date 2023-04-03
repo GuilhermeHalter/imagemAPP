@@ -17,14 +17,10 @@ export default class Counter extends Component {
     }
     render(){
         return (
-        <View>
-            <View style={styles.view}>
-            <Text style={styles.texts}>Like: {this.state.countL} </Text>
-            <Text style={styles.texts}>Dislike: {this.state.countD} </Text>
-            </View>
-            <br/>
-            <Button color="#85EB8F" onPress={() => this.increment()} title="Like"/>
-            <Button color="#DB473F" onPress={() => this.decrement()} title="Dislike"/>
+        <View style={styles.view}> 
+             <Text style={styles.texts}> <Button color="#DEDEDE" onPress={() => this.increment()} title='👍'/> {this.state.countL} </Text>
+            
+            <Text style={styles.texts}> <Button color="#DEDEDE" onPress={() => this.decrement()} title='👎'/> {this.state.countD} </Text>
         </View>
         )
     }
@@ -34,8 +30,9 @@ const styles = StyleSheet.create({
       flex: 1,
       marginLeft: 10,
     },
-    view:{
-        flexDirection:'row',
-      flexWrap:'wrap',
+    view: {
+      display:'flex',
+      flexDirection: 'row',
+      flexWrap: 'wrap',
     },
 });
