@@ -3,21 +3,28 @@ import Counter from './src/components/Counter';
 
 function Card (props) {
   return(
+
+    
     <View style={styles.card}>
-      
+      <View style={styles.image}> 
       <Image
         style={{
           resizeMode: 'stretch',
           width: '100%',
           height:200,
           marginBottom: 10,
+          borderTopLeftRadius:30,
+          borderTopRightRadius:30,
+
         }}
         source= {{uri: props.livro.capa}}
       />
-      <Text style={{ fontSize: 20, color:'#fff', marginLeft: 10,}}>Nome: {props.livro.piloto}</Text>
-      <Text style={{ fontSize: 20, color:'#fff', marginLeft: 10,}}>Pais: {props.livro.pais}</Text>
-      <Text style={{ fontSize: 20, color:'#fff', marginLeft: 10,}}>Equipe: {props.livro.equipe}</Text>
-      <Text style={{ fontSize: 20, color:'#fff', marginLeft: 10,}}>Pontos: {props.livro.pontos}</Text>
+      </View>
+    
+      <Text style={{ fontSize: 20, color:'black', marginLeft: 10,}}>Nome: {props.livro.piloto}</Text>
+      <Text style={{ fontSize: 20, color:'black', marginLeft: 10,}}>Pais: {props.livro.pais}</Text>
+      <Text style={{ fontSize: 20, color:'black', marginLeft: 10,}}>Equipe: {props.livro.equipe}</Text>
+      <Text style={{ fontSize: 20, color:'black', marginLeft: 10,}}>Pontos: {props.livro.pontos}</Text>
       <br/>
       <Counter/>
     </View>
@@ -219,13 +226,14 @@ const styles = StyleSheet.create({
     flexWrap:'wrap',
   },
   card:{
-    backgroundColor:'#6F9AFA',
-    width:'70%',
+    backgroundColor:'white',
+    width:'80%',
     maxHeight:500,
-    borderRadius:10,
+    borderRadius:1,
     marginLeft:10,
     marginRight:10,
     marginTop:40,
-    
-  },
+    borderRadius: 10,
+    borderWidth: 3,
+      },
 });
