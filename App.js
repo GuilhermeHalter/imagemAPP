@@ -13,8 +13,8 @@ function Card (props) {
           width: '100%',
           height:200,
           marginBottom: 10,
-          borderTopLeftRadius:30,
-          borderTopRightRadius:30,
+          borderTopLeftRadius:5,
+          borderTopRightRadius:5,
 
         }}
         source= {{uri: props.livro.capa}}
